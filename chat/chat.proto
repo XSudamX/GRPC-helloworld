@@ -17,4 +17,5 @@ message Message {
 //This service is made to be called from any RPC Client
 service ChatService {
   rpc SayHello(Message) returns (Message) {} // Here the SayHello function takes a parameter called Message and also returns a Message of its own
+  rpc Greeting(Message) returns (Message) {} // Another RPC call
 }
