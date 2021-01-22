@@ -1,10 +1,20 @@
-syntax = "proto3";
-package chat;
+//protofile used to generate go file
+//command used to generate;
+//protoc --go_out=plugins=grpc:chat chat.proto
+//where
+//"grpc:chat" calls the grpc plugin to generate the gofile in a folder called chat
 
+syntax = "proto3"; // Specifies the syntax used by the protofile
+package chat; // Specifies the package name to be used in the Go file
+
+/*Contains the format of the message that we are expecting back from the client, and also the message format 
+we are sending back to the client*/
 message Message {
-  string body = 1;
+  string body = 1;  // The format here is a string called body in the first position
 }
 
+
+//This service is made to be called from any RPC Client
 service ChatService {
-  rpc SayHello(Message) returns (Message) {}
+  rpc SayHello(Message) returns (Message) {} // Here the SayHello function takes a parameter called Message and also returns a Message of its own
 }
