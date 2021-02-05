@@ -1,7 +1,7 @@
 package chat
 
 //This is the file that contains the definitions of the RPC calls.
-
+//In the fullscale project this is also embedded into the register.go file
 import (
 	"log"
 
