@@ -1,6 +1,7 @@
 package main
 
-// Used go mod to manage dependencies and packages
+//this is basically the register.go file in fullscale projects
+// Used go mod to manage dependencies and packages  
 
 import (
 	"fmt"
